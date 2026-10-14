@@ -1,0 +1,237 @@
+/* ---------- Base ---------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #0D0D0D;
+  color: #F5F5F5;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+}
+
+header,
+main,
+footer {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  padding: 36px 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin: 16px 0;
+}
+
+/* ---------- Text ---------- */
+h1 {
+  color: #F5F5F5;
+  font-size: clamp(1.9rem, 7vw, 2.8rem);
+  line-height: 1.15;
+  margin: 28px 0 12px;
+}
+
+h2 {
+  color: #FF8C00;
+  font-size: clamp(1.5rem, 5vw, 2rem);
+  margin: 0 0 12px;
+}
+
+h3 {
+  color: #F5F5F5;
+  margin: 12px 0 6px;
+}
+
+p {
+  color: #B0B0B0;
+  margin: 0 0 14px;
+}
+
+span {
+  color: #FF8C00;
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+
+/* ---------- Links ---------- */
+a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+a:hover {
+  color: orange;
+}
+
+a:visited {
+  color: orange;
+  text-decoration: underline;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #FFC857;
+  outline-offset: 3px;
+}
+
+/* ---------- Navigation ---------- */
+nav {
+  background: #1A1A1A;
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin: 20px 0;
+}
+
+nav h2 {
+  margin-bottom: 8px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0 0 14px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 22px;
+}
+
+/* ---------- Buttons ---------- */
+button,
+.btn {
+  display: inline-block;
+  background: #FF8C00;
+  color: #0D0D0D;
+  font: 700 1rem system-ui, sans-serif;
+  padding: 10px 18px;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+button:hover,
+.btn:hover {
+  background: #FFC857;
+  color: #0D0D0D;
+}
+
+.btn:visited {
+  color: #0D0D0D;
+  text-decoration: none;
+}
+
+/* ---------- Menu ---------- */
+.menu-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 1fr;
+}
+
+.food-card {
+  background: #222222;
+  border-radius: 10px;
+  padding: 14px;
+}
+
+.food-card img {
+  height: 200px;
+  object-fit: cover;
+  margin: 0 0 10px;
+}
+
+.card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+/* ---------- About ---------- */
+.stats {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.stats li {
+  background: #222222;
+  border-radius: 10px;
+  padding: 12px 16px;
+}
+
+/* ---------- Contact form ---------- */
+form {
+  display: grid;
+  gap: 12px;
+  max-width: 480px;
+}
+
+input,
+textarea {
+  width: 100%;
+  font: inherit;
+  color: #F5F5F5;
+  background: #222222;
+  border: 2px solid #333;
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #8a8a8a;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #FF8C00;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+form button {
+  justify-self: start;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  padding-top: 20px;
+  padding-bottom: 30px;
+  border-top: 1px solid #2a2a2a;
+  margin-top: 20px;
+}
+
+.footer {
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* ---------- Larger screens ---------- */
+@media (min-width: 700px) {
+  .menu-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .stats {
+    grid-template-columns: 1fr 1fr;
+  }
+}
